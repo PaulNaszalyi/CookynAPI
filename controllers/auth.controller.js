@@ -18,7 +18,6 @@ exports.sign = (req, res, next) => {
             next(user);
         });
     });
-
 };
 
 exports.login = (req, res) => {
