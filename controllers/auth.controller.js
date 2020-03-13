@@ -22,8 +22,6 @@ exports.sign = (req, res, next) => {
 
 exports.login = (req, res) => {
 
-    console.log(req.body);
-
     //On récupère les infos du user, notamment le mot de passe pour le comparer
     User.findOne({username: req.body.username}, function(err, user) {
 
