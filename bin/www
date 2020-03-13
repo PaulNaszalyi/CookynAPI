@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('cookynapi:server');
 var http = require('http');
 
+const mongoose = require('../services/mongoose.service');
+
 /**
  * Get port from environment and store in Express.
  */
@@ -28,6 +30,9 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+
+
+mongoose.connect('mongodb://PoloRelou:YnovCampus92@ds113713.mlab.com:13713/cookyn');
 
 /**
  * Normalize a port into a number, string, or false.
