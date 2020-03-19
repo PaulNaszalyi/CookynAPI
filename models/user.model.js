@@ -20,13 +20,6 @@ const userSchema = new Schema({
     lastname: {
         type: String,
         maxlength: 50
-    },
-    username: {
-        type: String,
-        required: true,
-        unique: true,
-        lowercase: true,
-        maxlength: 50
     }
 }, {
     timestamps: true
@@ -39,7 +32,6 @@ userSchema.methods.joiValidate = (obj) => {
         password: Joi.string().required().error(new Error('Le password est requis')),
         firstname: Joi.string().required().error(new Error('Le prénom est requis')),
         lastname: Joi.string().required().error(new Error('Le nom est requis')),
-        username: Joi.string().required().error(new Error('Le username est requis'))
     });
 
     return(schema.validate(obj));

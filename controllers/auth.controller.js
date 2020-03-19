@@ -23,7 +23,7 @@ exports.sign = (req, res, next) => {
 exports.login = (req, res) => {
 
     //On récupère les infos du user, notamment le mot de passe pour le comparer
-    User.findOne({username: req.body.username}, function(err, user) {
+    User.findOne({email: req.body.email}, function(err, user) {
 
         if(err) return res.status(500).send('Error on the server.');
 

@@ -10,25 +10,25 @@ exports.create = (req, res) => {
         password: req.body.password,
         firstname: req.body.firstname,
         lastname: req.body.lastname,
-        username: req.body.username
     });
+
+    console.log(user);
 
     let err = user.joiValidate(req.body);
 
     if (err.error) res.send(`${err.error}`);
     else {
-
         user.password = bcrypt.hashSync(req.body.password, 10);
 
         user.save()
             .then(data => {
-                //On envoie un mail au nouveau user + admins
-                //Pour le moment je mets cette foncionnalité en suspend
-                //require('../services/nodemailer.service');
+                console.log("oui");
                 let token = jwt.sign({id: user._id}, "supersecret", {
                     expiresIn: 86400
                 });
                 res.send({data, tokenUser: token});
+
+                console.log("Création réussie !");
             })
             .catch(err => {
                 res.status(500).send(err.message);
@@ -38,7 +38,7 @@ exports.create = (req, res) => {
 };
 
 // Find and return all User from the database.
-    exports.findAll = (req, res) => {
+exports.findAll = (req, res) => {
 
     console.log("***Quelqu'un appelle findAll users");
 
