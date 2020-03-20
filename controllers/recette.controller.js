@@ -65,13 +65,18 @@ exports.findAll = (req, res) => {
     });
 };
 
+const fetchRecettes = (data) => {
+    if(data === '*') return Recette.find()
+    else return Recette.find({name: data})
+}
+
 // Find a single user with id
-exports.findOne = (req, res) => {
-    Recette.findById(req.params.id)
+exports.find = (req, res) => {
+   fetchRecettes(req.params.name)
         .then(recette => {
             if (!recette) {
                 return res.status(404).send({
-                    message: "Recette not found with id " + req.params.id
+                    errmsg: "Recette not found with id " + req.params.id
                 });
             }
             res.send(recette);
@@ -83,6 +88,28 @@ exports.findOne = (req, res) => {
         }
         return res.status(500).send({
             message: "Error retrieving user with id " + req.params.id
+        });
+    });
+};
+
+// Find a single user with id
+exports.findOne = (req, res) => {
+    Recette.findById(req.params.id)
+        .then(recette => {
+            if (!recette) {
+                return res.status(404).send({
+                    errmsg: "Recette not found with id " + req.params.id
+                });
+            }
+            res.send(recette);
+        }).catch(err => {
+        if (err.kind === 'ObjectId') {
+            return res.status(404).send({
+                errmsg: "Recette not found with id " + req.params.id
+            });
+        }
+        return res.status(500).send({
+            errmsg: "Error retrieving user with id " + req.params.id
         });
     });
 };
@@ -100,18 +127,18 @@ exports.update = (req, res) => {
         .then(recette => {
             if (!recette) {
                 return res.status(404).send({
-                    message: "Recette not found with id " + req.params.id
+                    errmsg: "Recette not found with id " + req.params.id
                 });
             }
             res.send(recette);
         }).catch(err => {
         if (err.kind === 'id') {
             return res.status(404).send({
-                message: "recette not found with id " + req.params.id
+                errmsg: "recette not found with id " + req.params.id
             });
         }
         return res.status(500).send({
-            message: "Error updating recette with id " + req.params.id
+            errmsg: "Error updating recette with id " + req.params.id
         });
     });
 
@@ -123,18 +150,18 @@ exports.delete = (req, res) => {
         .then(recette => {
             if (!recette) {
                 return res.status(404).send({
-                    message: "Recette not found with id " + req.params.id
+                    errmsg: "Recette not found with id " + req.params.id
                 });
             }
-            res.send({message: "Recette deleted successfully!"});
+            res.send({errmsg: "Recette deleted successfully!"});
         }).catch(err => {
         if (err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({
-                message: "recette not found with id " + req.params.id
+                errmsg: "recette not found with id " + req.params.id
             });
         }
         return res.status(500).send({
-            message: "Could not delete recette with id " + req.params.id
+            errmsg: "Could not delete recette with id " + req.params.id
         });
     });
 
