@@ -27,9 +27,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CookynReact" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Polo\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -51,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1584098757108</updated>
       <workItem from="1584098758728" duration="9587000" />
-      <workItem from="1584607989548" duration="6438000" />
+      <workItem from="1584607989548" duration="16251000" />
+      <workItem from="1584693425943" duration="9636000" />
     </task>
     <servers />
   </component>
@@ -62,30 +64,36 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584115763929">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="979" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584640775419">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584115763929" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584115423594">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="979" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1584640775419" />
+    <state x="987" y="275" key="FileChooserDialogImpl" timestamp="1584693976042">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584115423594" />
-    <state width="1511" height="148" key="GridCell.Tab.0.bottom" timestamp="1584608431576">
+    <state x="987" y="275" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1584693976042" />
+    <state width="1511" height="148" key="GridCell.Tab.0.bottom" timestamp="1584650014758">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1511" height="148" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1584608431576" />
-    <state width="1511" height="148" key="GridCell.Tab.0.center" timestamp="1584608431576">
+    <state width="1511" height="148" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1584650014758" />
+    <state width="1511" height="148" key="GridCell.Tab.0.center" timestamp="1584650014758">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1511" height="148" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1584608431576" />
-    <state width="1511" height="148" key="GridCell.Tab.0.left" timestamp="1584608431576">
+    <state width="1511" height="148" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1584650014758" />
+    <state width="1511" height="148" key="GridCell.Tab.0.left" timestamp="1584650014758">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1511" height="148" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1584608431576" />
-    <state width="1511" height="148" key="GridCell.Tab.0.right" timestamp="1584608431576">
+    <state width="1511" height="148" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1584650014758" />
+    <state width="1511" height="148" key="GridCell.Tab.0.right" timestamp="1584650014758">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1511" height="148" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1584608431576" />
+    <state width="1511" height="148" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1584650014758" />
+    <state x="300" y="166" key="SettingsEditor" timestamp="1584643650843">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="300" y="166" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1584643650843" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1584108790822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

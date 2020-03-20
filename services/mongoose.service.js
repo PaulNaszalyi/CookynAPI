@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 exports.connect = (url) => {
-    mongoose.connect(url, { useNewUrlParser: true , useCreateIndex: true}).then(() => {
+    mongoose.connect(url, { useNewUrlParser: true , useCreateIndex: true, useUnifiedTopology: true}).then(() => {
         console.log("Successfully connected to the database");
     }).catch(err => {
         console.log('Could not connect to the database.', err);

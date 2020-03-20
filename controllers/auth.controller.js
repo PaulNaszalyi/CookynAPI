@@ -27,7 +27,7 @@ exports.login = (req, res) => {
 
         if(err) return res.status(500).send('Error on the server.');
 
-        if(!user) return res.send({errmsg: 'Username incorrect'});
+        if(!user) return res.send({errmsg: 'Email incorrect'});
 
         if(bcrypt.compareSync(req.body.password, user.password)) {
             // res == true

@@ -22,17 +22,22 @@ exports.create = (req, res) => {
 
         user.save()
             .then(data => {
-                console.log("oui");
-                let token = jwt.sign({id: user._id}, "supersecret", {
+                const token = jwt.sign({id: user._id}, "supersecret", {
                     expiresIn: 86400
                 });
-                res.send({data, tokenUser: token});
+
+                res.send({
+                    email: data.email,
+                    firstname: data.firstname,
+                    lastname: data.lastname,
+                    token: token
+                });
 
                 console.log("Création réussie !");
             })
             .catch(err => {
+                console.log(err);
                 res.status(500).send(err.message);
-                return res.status(500);
             });
     }
 };
