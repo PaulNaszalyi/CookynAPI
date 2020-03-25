@@ -6,6 +6,8 @@ const recette = require('../controllers/recette.controller');
 
 router.get('/recettes', recette.findAll);
 
+router.get('/recette/:id', recette.findOne);
+
 router.get('/findRecettes/:name', recette.find);
 
 router.post('/recette', recette.create);

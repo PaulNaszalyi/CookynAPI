@@ -12,14 +12,10 @@ exports.create = (req, res) => {
         lastname: req.body.lastname,
     });
 
-    console.log(user);
-
     let err = user.joiValidate(req.body);
-
     if (err.error) res.send(`${err.error}`);
     else {
         user.password = bcrypt.hashSync(req.body.password, 10);
-
         user.save()
             .then(data => {
                 const token = jwt.sign({id: user._id}, "supersecret", {
@@ -44,9 +40,6 @@ exports.create = (req, res) => {
 
 // Find and return all User from the database.
 exports.findAll = (req, res) => {
-
-    console.log("***Quelqu'un appelle findAll users");
-
     User.find()
         .then(users => {
             res.send(users);
@@ -81,7 +74,6 @@ exports.findOne = (req, res) => {
 
 // Update a user
 exports.update = (req, res) => {
-
     User.findByIdAndUpdate(req.params.id, {
         email: req.body.email,
         password: req.body.password,

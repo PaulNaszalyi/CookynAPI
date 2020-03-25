@@ -45,7 +45,7 @@ exports.create = (req, res) => {
             })
             .catch(err => {
                 console.log(err);
-                res.status(500).send(err.message);
+                res.send({errmsg: err.message});
             });
     }
 };
@@ -59,7 +59,7 @@ exports.findAll = (req, res) => {
         .then(recettes => {
             res.send(recettes);
         }).catch(err => {
-        res.status(500).send({
+        res.send({
             errmsg: err.message || "Some error occurred while finding recettes."
         });
     });
