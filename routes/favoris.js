@@ -12,4 +12,6 @@ router.delete('/favoris', user.delete);
 
 router.post('/getfavoris', user.find);
 
+router.get('/getfavorisbyuser/:id', user.findAllFavsByUser);
+
 module.exports = router;

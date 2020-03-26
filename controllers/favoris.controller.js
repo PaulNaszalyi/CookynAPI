@@ -54,6 +54,26 @@ exports.find = (req, res) => {
     });
 };
 
+exports.findAllFavsByUser = (req, res) => {
+    if (!req.params.id || req.params.id === "")
+        return res.send({errmsg: 'Aucune donnée envoyée...'});
+
+    Favorite.find({idUser: req.params.id})
+        .then(data => {
+            if (!data[0]) res.send({errmsg: "Vous n'avez aucun favoris"});
+            else res.send(data);
+        }).catch(err => {
+        if (err.kind === 'ObjectId') {
+            return res.status(404).send({
+                errmsg: "Favoris not found"
+            });
+        }
+        return res.status(500).send({
+            errmsg: "Error retrieving Favoris"
+        });
+    });
+};
+
 // Find a single user with id
 exports.findOne = (req, res) => {
     if (req.body.constructor === Object && Object.keys(req.body).length === 0)
