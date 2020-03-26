@@ -10,6 +10,8 @@ router.get('/recette/:id', recette.findOne);
 
 router.get('/findRecettes/:name', recette.find);
 
+router.post('/findRecettes/', recette.findByUserFavorite);
+
 router.post('/recette', recette.create);
 
 router.post('/photo', recette.uploadPhoto);

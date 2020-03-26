@@ -67,7 +67,7 @@ exports.findAll = (req, res) => {
 
 const fetchRecettes = (data) => {
     if(data === '*') return Recette.find()
-    else return Recette.find({name: data})
+    else return Recette.find({name: { "$regex": data, "$options": "i" }})
 }
 
 // Find a single user with id
@@ -88,6 +88,28 @@ exports.find = (req, res) => {
         }
         return res.status(500).send({
             message: "Error retrieving user with id " + req.params.id
+        });
+    });
+};
+
+// Find a single user with id
+exports.findByUserFavorite = (req, res) => {
+   Recette.find({_id: {$in: req.body.recipes}})
+        .then(recettes => {
+            if (!recettes) {
+                return res.status(404).send({
+                    errmsg: "Recettes not found"
+                });
+            }
+            res.send(recettes);
+        }).catch(err => {
+        if (err.kind === 'ObjectId') {
+            return res.status(404).send({
+                message: "Recettes not found"
+            });
+        }
+        return res.status(500).send({
+            message: "Error retrieving recettes"
         });
     });
 };
