@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 
 // Create and Save a new user
 exports.create = (req, res) => {
+    if (!req.body || req.body === "")
+        return res.send({errmsg: 'Vous n\'avez rien envoyé'})
 
     const user = new User({
         email: req.body.email,
@@ -13,7 +15,7 @@ exports.create = (req, res) => {
     });
 
     let err = user.joiValidate(req.body);
-    if (err.error) res.send(`${err.error}`);
+    if (err.error) res.send({errmsg: `${err.error}`});
     else {
         user.password = bcrypt.hashSync(req.body.password, 10);
         user.save()

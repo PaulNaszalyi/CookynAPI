@@ -60,8 +60,15 @@ exports.findAllFavsByUser = (req, res) => {
 
     Favorite.find({idUser: req.params.id})
         .then(data => {
+            console.log(data)
             if (!data[0]) res.send({errmsg: "Vous n'avez aucun favoris"});
-            else res.send(data);
+            else {
+                let ids = []
+                data.forEach(recipe => {
+                    ids.push(recipe.idRecette)
+                })
+                res.send(ids);
+            }
         }).catch(err => {
         if (err.kind === 'ObjectId') {
             return res.status(404).send({

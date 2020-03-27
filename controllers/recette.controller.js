@@ -3,7 +3,7 @@ const JSftp = require("jsftp");
 
 
 exports.uploadPhoto = (req, res) => {
-    if(!req.files.file.data || req.files.file.data === "")
+    if (!req.files.file.data || req.files.file.data === "")
         return res.send({errmsg: 'Vous n\'avez envoyé aucune photo'})
 
     const ftp = new JSftp({
@@ -66,13 +66,14 @@ exports.findAll = (req, res) => {
 };
 
 const fetchRecettes = (data) => {
-    if(data === '*') return Recette.find()
-    else return Recette.find({name: { "$regex": data, "$options": "i" }})
+    if (data === '*') return Recette.find()
+    else return Recette.find({name: {"$regex": data, "$options": "i"}})
 }
 
 // Find a single user with id
 exports.find = (req, res) => {
-   fetchRecettes(req.params.name)
+    fetchRecettes(req.params.name)
+        .sort('-createdAt')
         .then(recette => {
             if (!recette) {
                 return res.status(404).send({
@@ -94,7 +95,7 @@ exports.find = (req, res) => {
 
 // Find a single user with id
 exports.findByUserFavorite = (req, res) => {
-   Recette.find({_id: {$in: req.body.recipes}})
+    Recette.find({_id: {$in: req.body.recipes}})
         .then(recettes => {
             if (!recettes) {
                 return res.status(404).send({

@@ -26,7 +26,6 @@ exports.login = (req, res) => {
     User.findOne({email: req.body.email}, function(err, user) {
 
         if(err) return res.status(500).send('Error on the server.');
-
         if(!user) return res.send({errmsg: 'Email incorrect'});
 
         if(bcrypt.compareSync(req.body.password, user.password)) {
