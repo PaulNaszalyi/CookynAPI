@@ -35,7 +35,7 @@ exports.create = (req, res) => {
             })
             .catch(err => {
                 console.log(err);
-                res.status(500).send(err.message);
+                res.send({errmsg: err.message});
             });
     }
 };

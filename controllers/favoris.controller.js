@@ -13,7 +13,7 @@ exports.create = (req, res) => {
     else {
         favoris.save()
             .then(data => {
-                res.send(data);
+                res.send(data.idRecette);
             })
             .catch(err => {
                 console.log(err);
@@ -151,7 +151,7 @@ exports.delete = (req, res) => {
                 return res.send({
                     errmsg: "Favoris non trouvé"
                 });
-            else res.send({msg: "Favoris supprimé"});
+            else res.send(req.body.idRecette);
         }).catch(err => {
         if (err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({

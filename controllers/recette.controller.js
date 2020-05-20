@@ -1,8 +1,8 @@
 const Recette = require('../models/recette.model');
 const JSftp = require("jsftp");
 
-
 exports.uploadPhoto = (req, res) => {
+    console.log(req.files);
     if (!req.files.file.data || req.files.file.data === "")
         return res.send({errmsg: 'Vous n\'avez envoyé aucune photo'})
 

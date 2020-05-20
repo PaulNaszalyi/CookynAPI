@@ -36,7 +36,7 @@ recetteSchema.methods.joiValidate = (obj) => {
     const Joi = require('@hapi/joi');
     const schema = Joi.object({
         idUser: Joi.string().required().error(new Error('L\'idUser est requis')),
-        name: Joi.string().required().error(new Error('Le nom de la recette est requis')),
+        name: Joi.string().max(30, 'utf8').required().error(new Error('Le nom de la recette n\'est pas renseigné ou est trop long')),
         description: Joi.string().required().error(new Error('La description est requise')),
         steps: Joi.string().required().error(new Error('Les steps sont requises')),
         ingredients: Joi.string().required().error(new Error('Les ingrédients sont requis')),

@@ -19,7 +19,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -27,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CookynReact" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cookyn" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Polo\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -62,26 +61,46 @@
       <workItem from="1585220251935" duration="7278000" />
       <workItem from="1585252664353" duration="1464000" />
       <workItem from="1585297842288" duration="2453000" />
+      <workItem from="1585776310375" duration="138000" />
+      <workItem from="1585936164584" duration="4262000" />
+      <workItem from="1586004772757" duration="627000" />
+      <workItem from="1586087392717" duration="946000" />
+      <workItem from="1586209255867" duration="619000" />
+      <workItem from="1586283617892" duration="1116000" />
+      <workItem from="1586300681019" duration="130000" />
+      <workItem from="1586364430444" duration="2044000" />
+      <workItem from="1586418056378" duration="94000" />
+      <workItem from="1586971024724" duration="617000" />
+      <workItem from="1588439935861" duration="162000" />
+      <workItem from="1588441554351" duration="497000" />
+      <workItem from="1588442485175" duration="832000" />
+      <workItem from="1588444575240" duration="529000" />
+      <workItem from="1589997930363" duration="100000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="524" y="309" key="#Notifications" timestamp="1586365585124">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="524" y="309" key="#Notifications/0.0.2560.1050@0.0.2560.1050" timestamp="1586365585124" />
     <state x="979" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584640775419">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="734" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584115763929" />
     <state x="979" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1584640775419" />
-    <state x="987" y="275" key="FileChooserDialogImpl" timestamp="1585297858202">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="987" y="278" key="FileChooserDialogImpl" timestamp="1589997949275">
+      <screen x="0" y="0" width="2560" height="1050" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584115423594" />
     <state x="987" y="275" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1585297858202" />
+    <state x="987" y="278" key="FileChooserDialogImpl/0.0.2560.1050@0.0.2560.1050" timestamp="1589997949275" />
     <state width="1511" height="148" key="GridCell.Tab.0.bottom" timestamp="1584650014758">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
